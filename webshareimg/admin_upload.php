@@ -38,7 +38,7 @@ $conn = init();
       
  
       $insert = "INSERT INTO `si_image` (`id`, `name`, `description`, `status`, `tag` , `price` ,`url`, `id_user`, `url_vip` ) VALUES (NULL, '".$_POST['image_name']."', '".$_POST['category_image_desc']."', '".$_POST['status_image']."', '".$_POST['tag_image']."','".$_POST['price_image']."', 'uploads_compress/$tenfilemoi', '".$_SESSION['id_admin']."', 'uploads/".$image_vip.".".$duoifile."'  )";   
-      
+      echo $insert;
       
       $ret_insert = mysqli_query($conn, $insert);  
    header("Location: index.php?check_user=true");    

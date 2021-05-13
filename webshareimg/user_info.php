@@ -121,6 +121,7 @@ body {
     </div>
     <div class="col-4">
       <form class="form-inline" action="user_info_update.php" method="POST">
+        <input type="hidden" value="<?php echo $row['id'] ?>" name="id_user_info">
           <!-- hien -->
           <div class="form-group mb-2">
             <input type="text" readonly class="form-control-plaintext" value="Id:">

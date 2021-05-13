@@ -65,7 +65,7 @@
                           <form action="user_info.php" method="POST">
                           <input type="hidden" value="'.$row1['id'].'" name="id_user_info">
                           <button class="dropdown-item" type="submit">Hồ sơ</button>
-                          <form>
+                          </form>
                           <a href="user_show_image.php" <button class="dropdown-item" type="button">Kho ảnh của bạn</button></a>
                           <a href="user_logout.php"<button class="dropdown-item" type="button">Logout</button></a>
                         </div>
@@ -101,26 +101,26 @@
                       <!-- Modal body -->
                       <form action="admin_upload.php" method="POST" enctype="multipart/form-data">
                           <div class="form-group">
-                                    <label for="exampleInputEmail1">Tên ảnh</label>
-                                    <input type="text" name="image_name" class="form-control" id="exampleInputEmail1" placeholder="Tên ảnh">
-                                </div>
-                                <div class="form-group">
-                                    <label >Mô tả</label>
-                                    <textarea style="resize: none"rows="8" class="form-control" name="category_image_desc"  placeholder="Mô tả"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label >Trạng thái</label>
-                                    <input  style="resize: none"rows="8" class="form-control" name="status_image"  placeholder="Trạng thái">
-                                </div>
-                                <div class="form-group">
-                                    <label >Thẻ tag</label>
-                                    <input style="resize: none"rows="8" class="form-control" name="tag_image"  placeholder="tag">
-                                </div>
-                                <div class="form-group">
-                                    <label >Giá</label>
-                                    <input style="resize: none"rows="8" class="form-control" name="price_image"  placeholder="10 000 đ - 100 000 đ">
-                                </div>
-                          
+                              <label for="exampleInputEmail1">Tên ảnh</label>
+                              <input type="text" name="image_name" class="form-control" id="exampleInputEmail1" placeholder="Tên ảnh">
+                          </div>
+                          <div class="form-group">
+                              <label >Mô tả</label>
+                              <textarea style="resize: none"rows="8" class="form-control" name="category_image_desc"  placeholder="Mô tả"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <label >Trạng thái</label>
+                              <input  style="resize: none"rows="8" class="form-control" name="status_image"  placeholder="Trạng thái">
+                          </div>
+                          <div class="form-group">
+                              <label >Thẻ tag</label>
+                              <input style="resize: none"rows="8" class="form-control" name="tag_image"  placeholder="tag">
+                          </div>
+                          <div class="form-group">
+                              <label >Giá</label>
+                              <input style="resize: none"rows="8" class="form-control" name="price_image"  placeholder="10 000 đ - 100 000 đ">
+                          </div>
+                    
                           
                           <div class="bot">
                               Hình ảnh: <input type="file" name="hinhanh"></div></br>  
@@ -133,8 +133,8 @@
                       <div class="modal-footer">
                         
                         <input id="upload" class="btn btn-primary" type="submit" name="submit" value="upload">
-                         
-                        </form> 
+                         </div>
+                  </form> 
                         
             </div> <!-- navbar-nav ml-auto -->
         </div>

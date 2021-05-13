@@ -158,6 +158,7 @@ body {
 </style>
             </head>
             <body>
+              <div class="container-fluid">
             <div>
               <?php
                   include_once('nav.php');
@@ -451,6 +452,7 @@ body {
       <a href="tendency.php"><p class="text-right">>>Xem thêm>></p>
       </a>
     </div>
+</div>
 </div>
             </body>
     <?php

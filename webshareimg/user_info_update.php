@@ -7,7 +7,7 @@ $conn = init();
 $sql = "UPDATE si_admin set username='".$_POST['username']."', email='".$_POST['email']."', password='".$_POST['password']."', phone='".$_POST['phone']."' where id='".$_SESSION['id_admin']."'";
 
     mysqli_query($conn, $sql);  
-header("Location: user_info.php");
+header("Location: user_info.php?id_user_info=".$_POST['id_user_info']);
 
 close($conn);
 
