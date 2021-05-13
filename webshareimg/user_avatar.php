@@ -38,11 +38,14 @@ $conn = init();
 
 
       
-$sql = "UPDATE si_admin set url_avatar= 'uploads_avatar/".$tenfilemoi."' where id='".$_SESSION['id_admin']."'";
+    $sql = "UPDATE si_admin set url_avatar= 'uploads_avatar/".$tenfilemoi."' where id='".$_SESSION['id_admin']."'";
 
     mysqli_query($conn, $sql);  
-header("Location: user_info.php");    
+    header("Location: user_info.php?id_user_info=".$_POST['id_user_info']);   
+
   }
+
+
 
   close($conn); 
 
@@ -64,4 +67,3 @@ header("Location: user_info.php");
 
   }
 ?>
-

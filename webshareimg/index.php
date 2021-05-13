@@ -305,8 +305,9 @@ body {
         </div>
 
 </div>
-        <a href="index_all_image.php"><p class="text-right">>>Xem thêm>></p5></a>
-
+<div>
+        <a href="index_all_image.php"><p class="text-right">>>Xem thêm>></p></a>
+</div>
 
 <div class='js-home-links-title title-tabs__title title'> <h3>Xu hướng</h3></div>
 
@@ -446,7 +447,10 @@ body {
           ?>
         </div>
       </div>
-      <a href="tendency.php"><p class="text-right">>>Xem thêm>></p5>
+      <div>
+      <a href="tendency.php"><p class="text-right">>>Xem thêm>></p>
+      </a>
+    </div>
 </div>
             </body>
     <?php

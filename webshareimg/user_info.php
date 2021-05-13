@@ -7,7 +7,7 @@ $conn = init();
 
 
  
-    $sql = 'SELECT si_admin.*, SUM(view) AS TongView, SUM(like_image) AS TongLike FROM si_admin LEFT JOIN si_image ON si_admin.id = si_image.id_user WHERE si_admin.id='. $_POST['id_user_info'].' GROUP BY si_admin.id'; 
+    $sql = 'SELECT si_admin.*, SUM(view) AS TongView, SUM(like_image) AS TongLike FROM si_admin LEFT JOIN si_image ON si_admin.id = si_image.id_user WHERE si_admin.id='. $_REQUEST['id_user_info'].' GROUP BY si_admin.id'; 
     $retval= mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($retval) > 0){  
@@ -106,9 +106,10 @@ body {
       <form action="user_avatar.php" method="POST" enctype="multipart/form-data">
         <img src=" <?php echo  $row['url_avatar'] ?>" name="avatar"  class="img-thumbnail">
         <?php
-          if (isset($_SESSION['id_admin']) && ($_SESSION['id_admin'] == $_POST['id_user_info'])) {
+          if (isset($_SESSION['id_admin']) && ($_SESSION['id_admin'] == $_REQUEST['id_user_info'])) {
           ?>
         <div class="form-group">
+          <input type="hidden" value="<?php echo $row['id'] ?>" name="id_user_info">
           <input type="file" class="form-control-file" name="url_avatar">
         </div>
         <input class="btn btn-primary" type="submit" name="submit" value="upload">
@@ -128,7 +129,7 @@ body {
             <input type="text" readonly class="form-control" value="<?php echo $row['id']?>">
           </div>
           <?php
-            if (isset($_SESSION['id_admin']) && ($_SESSION['id_admin'] == $_POST['id_user_info'])) {
+            if (isset($_SESSION['id_admin']) && ($_SESSION['id_admin'] == $_REQUEST['id_user_info'])) {
                # code...
               
           ?>
@@ -219,7 +220,7 @@ body {
 
  
             <?php
-              if (isset($_SESSION['id_admin']) && ($_SESSION['id_admin'] == $_POST['id_user_info']))  {
+              if (isset($_SESSION['id_admin']) && ($_SESSION['id_admin'] == $_REQUEST['id_user_info']))  {
                 echo '<input  class="btn btn-primary" type="submit" name="submit" value="Cập nhật">';
               }
             ?>
